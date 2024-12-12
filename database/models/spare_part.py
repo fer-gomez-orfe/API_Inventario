@@ -1,11 +1,9 @@
-from pydantic import BaseModel
 from typing import Optional
+from pydantic import BaseModel
 
-class SparePart(BaseModel):
-    id: Optional[str] = None
-    part_number : str
+
+class SparePartModel(BaseModel):
+    id: Optional[int] = None
+    part_number: str
     name: str
-    description: str
-    marca: str
-    qty: int
-    
+    description: Optional[str] = None
