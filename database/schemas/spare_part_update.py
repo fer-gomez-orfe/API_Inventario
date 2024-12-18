@@ -5,6 +5,6 @@ from sqlmodel import Field, SQLModel
 class SparePartUpdate(SQLModel):
     part_number: str | None = None
     name: str | None = None
-    description: Optional[str] | None = None
-    marca: Optional[str] | None = None
-    qty: Optional[int] | None = None
+    description: str | None = None
+    marca: str | None = None
+    qty: int | None = None
