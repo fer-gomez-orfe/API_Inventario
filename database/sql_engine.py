@@ -1,7 +1,8 @@
 from sqlmodel import SQLModel, Session, create_engine
 
 # Create the SQLite database engine
-URL_DATABASE = "mysql+pymysql://MonUser:MONUser1357$@192.168.0.196:3306/inventario"
+URL_DATABASE = "mysql+pymysql://MONTRA_ADMIN:MONAd1357$@192.168.0.28:3306/inventario"
+#URL_DATABASE = "mysql+pymysql://MonUser:MONUser1357$@201.141.21.177:3306/inventario"
 engine = create_engine(URL_DATABASE)
 SQLModel.metadata.create_all(engine)
 

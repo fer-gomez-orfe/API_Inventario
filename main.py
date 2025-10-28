@@ -15,3 +15,7 @@ app.include_router(cubiscan.router)
 @app.get("/")
 def read_root():
     return ("Hello World")
+
+
+## uvicorn main:app --host 0.0.0.0 --port 80
+## uvicorn main:app

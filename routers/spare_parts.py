@@ -20,10 +20,7 @@ async def get_spare_parts(
 
 # Agregar un "Spare Part"
 @router.post("/", response_model=SparePartPublic)
-async def add_spare_part(
-    spare_part: SparePart, 
-    session: Session = Depends(get_session)
-    ):
+async def add_spare_part(spare_part: SparePart, session: Session = Depends(get_session)):
     session.add(spare_part)
     session.commit()
     session.refresh(spare_part)
